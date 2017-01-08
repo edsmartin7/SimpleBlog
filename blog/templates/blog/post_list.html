@@ -3,16 +3,20 @@
       <title>Eddie's blog</title>
    </head>
    <body>
+      <!--
       <h1>Hello Friend,</h1>
       <p><strong>Welcome to my django powered website!</strong></p>
       <p>To see more of my work:  
          <a href="https://github.com/edsmartin7">Click here</a>
       </p>
-      <div>
-         {% for post in posts %}
-            {{ post }}
-         {% endfor %}
-      </div>
+      -->
+      {% for post in posts %}
+         <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+         </div>
+      {% endfor %}
    </body>
 </html>
 
